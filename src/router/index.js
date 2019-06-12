@@ -69,6 +69,28 @@ export default new Router({
             }]
         }
       ]
+    },
+    {
+      path: '/',
+      component: Layout,
+      children: [{
+        path: 'html5',
+        name: 'Html5',
+        component: () => import('@/components/html5'),
+        children: [{
+          path: '/html5/one',
+          name: 'ONE',
+          component: () => import('@/components/html5/components/children/one')
+        }, {
+          path: '/html5/two',
+          name: 'TWO',
+          component: () => import('@/components/html5/components/children/two')
+        }, {
+          path: '/html5/three',
+          name: 'THREE',
+          component: () => import('@/components/html5/components/children/three')
+        }]
+      }]
     }
   ]
 })

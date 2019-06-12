@@ -16,3 +16,9 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+    .echart{
+        padding: 20px;
+    }
+</style>

@@ -51,6 +51,12 @@
                     </el-submenu>
                 </el-submenu>
             </el-submenu>
+            <router-link :to="{name:'Html5'}">
+                <el-menu-item index="4">
+                    <i class="el-icon-medal-1"></i>
+                    <span>Html5</span>
+                </el-menu-item>
+            </router-link>
         </el-menu>
     </div>
 </template>

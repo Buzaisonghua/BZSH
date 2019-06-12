@@ -9,6 +9,7 @@
 
 <style lang="scss">
     .menuTwo{
+        padding: 20px;
         .box{
             width: 100%;
             height: 300px;
@@ -17,7 +18,7 @@
             span {
                 display: inline-block;
                 margin-top: 30px;
-                margin-left: 30px
+                margin-left: 30px;
             }
         }
     }

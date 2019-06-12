@@ -1,12 +1,12 @@
 <template>
     <div class="layout">
         <el-container>
-            <el-aside :width="isNav ? closeLeftNav:openLeftNav" >
+            <el-aside :width="isNav ? closeLeftNav:openLeftNav" v-if="isView">
                 <LeftNav />
             </el-aside>
 
             <el-container>
-                <el-header>
+                <el-header v-if="isView">
                     <Top />
                 </el-header>
 
@@ -32,7 +32,8 @@ export default {
   },
   computed: {
     ...mapState({
-      isNav: 'isNav'
+      isNav: 'isNav',
+      isView: 'isView'
     })
   },
   components: {
@@ -42,7 +43,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
    .layout{
        width: 100%;
        height: 100%;
@@ -61,6 +62,10 @@ export default {
                padding: 0;
                height: 50px!important;
                box-shadow: -1px 1px 4px rgba(0,21,41,.88);
+           }
+           .el-main{
+               width: 100%;
+               padding: 0px;
            }
        }
        @media all and (max-width: 800px) {

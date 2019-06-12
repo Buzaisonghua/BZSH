@@ -7,7 +7,8 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
   state: {
-    isNav: Boolean(getCookies('isNav'))
+    isNav: Boolean(getCookies('isNav')),
+    isView: true
   },
   mutations: {
     changeNav (state) {
@@ -17,6 +18,13 @@ const store = new Vuex.Store({
       } else {
         setCookies('isNav', 'true')
         state.isNav = Boolean(getCookies('isNav'))
+      }
+    },
+    changeIsView (state) {
+      if (state.isView) {
+        state.isView = false
+      } else {
+        state.isView = true
       }
     }
   }
