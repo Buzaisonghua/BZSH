@@ -1,0 +1,42 @@
+[
+  {
+    "phone": [
+      {
+        "phoneName": "ipone6",
+        "phoneMoney": "1999"
+      },
+      {
+        "phoneName": "ipone7",
+        "phoneMoney": "2999"
+      },
+      {
+        "phoneName": "ipone8",
+        "phoneMoney": "3999"
+      },
+      {
+        "phoneName": "iponex",
+        "phoneMoney": "4999"
+      }
+    ]
+  },
+  {
+    "phone": [
+      {
+        "phoneName": "小米2",
+        "phoneMoney": "1998"
+      },
+      {
+        "phoneName": "小米3",
+        "phoneMoney": "2998"
+      },
+      {
+        "phoneName": "小米4",
+        "phoneMoney": "3998"
+      },
+      {
+        "phoneName": "小米5",
+        "phoneMoney": "4998"
+      }
+    ]
+  }
+]

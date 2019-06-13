@@ -12,6 +12,11 @@ export default new Router({
       component: () => import('@/components/login')
     },
     {
+      path: '/404',
+      name: '404',
+      component: () => import('@/components/errorPage/404')
+    },
+    {
       path: '/',
       component: Layout,
       children: [{
@@ -71,26 +76,30 @@ export default new Router({
       ]
     },
     {
-      path: '/',
-      component: Layout,
+      path: '/newView',
+      name: 'NewView',
+      component: () => import('@/components/newView/index'),
       children: [{
-        path: 'html5',
-        name: 'Html5',
-        component: () => import('@/components/html5'),
-        children: [{
-          path: '/html5/one',
-          name: 'ONE',
-          component: () => import('@/components/html5/components/children/one')
-        }, {
-          path: '/html5/two',
-          name: 'TWO',
-          component: () => import('@/components/html5/components/children/two')
-        }, {
-          path: '/html5/three',
-          name: 'THREE',
-          component: () => import('@/components/html5/components/children/three')
-        }]
+        path: '/newView/ONE',
+        name: 'newViewONE',
+        component: () => import('@/components/newView/newViewComponents/mainComponents/mainComponentsONE')
+      }, {
+        path: '/newView/TWO',
+        name: 'newViewTWO',
+        component: () => import('@/components/newView/newViewComponents/mainComponents/mainComponentsTwo')
+      }, {
+        path: '/newView/THREE',
+        name: 'newViewTHREE',
+        component: () => import('@/components/newView/newViewComponents/mainComponents/mainComponentsThree')
+      }, {
+        path: '/newView/Four',
+        name: 'newViewFOUR',
+        component: () => import('@/components/newView/newViewComponents/mainComponents/mainComponentsFour')
       }]
+    },
+    {
+      path: '*',
+      redirect: {name: '404'}
     }
   ]
 })

@@ -16,6 +16,43 @@
                 </div>
             </el-col>
         </el-row>
+        <el-row :gutter="32">
+            <el-col :xs="24" :sm="24" :lg="12">
+                <div class="pie-bar-chart el-line-chart">
+                    <EchartsPieChart />
+                </div>
+            </el-col>
+            <el-col :xs="24" :sm="24" :lg="12">
+                <div class="pie-bar-chart el-line-chart">
+                    <EchartsBarChart />
+                </div>
+            </el-col>
+        </el-row>
+        <el-row :gutter="32">
+            <el-col :xs="24" :sm="24" :lg="12">
+                <div class="pie-bar-chart el-line-chart">
+                    <EchartsPieChart />
+                </div>
+            </el-col>
+            <el-col :xs="24" :sm="24" :lg="12">
+                <div class="pie-bar-chart el-line-chart">
+                    <EchartsBarChart />
+                </div>
+            </el-col>
+        </el-row>
+        <el-row :gutter="32">
+            <el-col :xs="24" :sm="24" :lg="12">
+                <div class="pie-bar-chart el-line-chart">
+                    <EchartsPieChart />
+                </div>
+            </el-col>
+            <el-col :xs="24" :sm="24" :lg="12">
+                <div class="pie-bar-chart el-line-chart">
+                    <EchartsBarChart />
+                </div>
+            </el-col>
+        </el-row>
+
     </div>
 </template>
 
