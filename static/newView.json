@@ -1,6 +1,7 @@
 [
   {
-    "phone": [
+    "phone":"新品上市",
+    "items": [
       {
         "phoneName": "ipone6",
         "phoneMoney": "1999"
@@ -20,7 +21,8 @@
     ]
   },
   {
-    "phone": [
+    "phone": "价格优惠",
+    "items": [
       {
         "phoneName": "小米2",
         "phoneMoney": "1998"
@@ -35,6 +37,27 @@
       },
       {
         "phoneName": "小米5",
+        "phoneMoney": "4998"
+      }
+    ]
+  },
+  {
+    "phone": "爱国？",
+    "items": [
+      {
+        "phoneName": "华为2",
+        "phoneMoney": "1998"
+      },
+      {
+        "phoneName": "华为3",
+        "phoneMoney": "2998"
+      },
+      {
+        "phoneName": "华为4",
+        "phoneMoney": "3998"
+      },
+      {
+        "phoneName": "华为5",
         "phoneMoney": "4998"
       }
     ]

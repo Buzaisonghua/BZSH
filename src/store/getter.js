@@ -1,8 +1,5 @@
-import users from './module/users'
-
-const getter = {
-  getInfo () {
-    return users.state.usersInfo
-  }
+const getters = {
+  loginStatus: state => state.app.loginStatus,
+  sidebarStatus: state => state.app.sidebarStatus
 }
-export default getter
+export default getters

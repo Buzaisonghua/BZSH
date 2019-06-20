@@ -5,21 +5,21 @@
                 class="el-menu-demo"
                 @open="handleOpen"
                 @close="handleClose"
-                active-text-color="#60AF77"
                 default-active="activeMenu"
                 :collapse="isNav"
                 mode="vertical"
+                active-text-color="#5FAC75"
         >
             <router-link :to="{name:'Home'}">
                 <el-menu-item index="1">
                     <i class="el-icon-setting"></i>
-                    <span>Home</span>
+                    <span slot="title">Home</span>
                 </el-menu-item>
             </router-link>
             <router-link :to="{name:'Echart'}">
                 <el-menu-item index="2">
                     <i class="el-icon-menu"></i>
-                    <span>Echart</span>
+                    <span slot="title">Echart</span>
                 </el-menu-item>
             </router-link>
             <el-submenu index="3">
@@ -33,7 +33,7 @@
                 <el-submenu index="3-2">
                     <span slot="title">Menu-2</span>
                     <router-link :to="{name:'MenuTwoOne'}">
-                        <el-menu-item index="3-2-1">Menu-2-1</el-menu-item>
+                        <el-menu-item slot="title" index="3-2-1">Menu-2-1</el-menu-item>
                     </router-link>
                     <router-link :to="{name:'MenuTwoTwo'}">
                         <el-menu-item index="3-2-2">
@@ -54,7 +54,7 @@
             <router-link :to="{name: 'NewView'}">
                 <el-menu-item index="4">
                     <i class="el-icon-medal-1"></i>
-                    <span>newView</span>
+                    <span slot="title">newView</span>
                 </el-menu-item>
             </router-link>
         </el-menu>

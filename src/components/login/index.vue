@@ -37,8 +37,7 @@
 </template>
 
 <script>
-import { setCookies } from '@/utils/cookie'
-
+import Cookies from 'js-cookie'
 export default {
   data () {
     var validateUsername = (rule, value, callback) => {
@@ -93,9 +92,7 @@ export default {
         alert('没有此账号')
       } else {
         if (this.loginForm.password === this.passWordArr[this.userNameArr.indexOf(this.loginForm.username)]) {
-          setCookies('username', this.loginForm.username)
-          setCookies('isNav', 'true')
-          this.$store.commit('changeLogin')
+          this.$store.dispatch('toggleLogin')
           this.$router.push({path: '/'})
         } else {
           alert('密码错误')
@@ -117,7 +114,7 @@ export default {
     .login{
         width: 100%;
         height: 100%;
-        min-hright: 100%;
+        min-height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;

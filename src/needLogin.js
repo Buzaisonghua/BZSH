@@ -11,7 +11,7 @@ NProgress.configure({ // 进度条设置
 router.beforeEach((to, from, next) => {
   NProgress.start() // 使用进度条
   // 路由中设置的needLogin字段就在to当中
-  if (getCookies('username')) { // 判断是否存在username的cookie，存在则是登录状态
+  if (getCookies('loginUser')) { // 判断是否存在username的cookie，存在则是登录状态
     // 登录状态
     if (to.path === '/login') { // 如果要进入登录页跳转至主页
       next({path: '/home'})

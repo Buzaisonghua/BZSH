@@ -21,7 +21,7 @@ export default {
   },
   methods: {
     changeNa () {
-      this.$store.commit('changeNav')
+      this.$store.dispatch('toggleSidebar')
     }
   }
 }

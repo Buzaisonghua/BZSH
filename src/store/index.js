@@ -1,5 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import getters from './getter'
+import app from './module/app'
 
 import { getCookies, setCookies } from '@/utils/cookie'
 
@@ -9,6 +11,10 @@ const store = new Vuex.Store({
   state: {
     isNav: Boolean(getCookies('isNav')),
     isView: true
+  },
+  getters,
+  modules: {
+    app
   },
   mutations: {
     changeNav (state) {

@@ -1,7 +1,7 @@
 <template>
     <div class="layout">
         <el-container>
-            <el-aside :width="isNav ? closeLeftNav:openLeftNav" v-if="isView">
+            <el-aside :width="sidebarStatus ? openLeftNav:closeLeftNav" v-if="isView">
                 <LeftNav />
             </el-aside>
 
@@ -19,9 +19,9 @@
 </template>
 
 <script>
-import LeftNav from './Nav/leftNav'
+import LeftNav from './Nav/leftNav.vue'
 import Top from './Nav/top'
-import { mapState } from 'vuex'
+import { mapState, mapGetters } from 'vuex'
 
 export default {
   data () {
@@ -32,8 +32,10 @@ export default {
   },
   computed: {
     ...mapState({
-      isNav: 'isNav',
       isView: 'isView'
+    }),
+    ...mapGetters({
+      sidebarStatus: 'sidebarStatus'
     })
   },
   components: {
@@ -49,7 +51,7 @@ export default {
        height: 100%;
        min-width: 320px;
        min-height: 100%;
-       .el-container{
+       .nel-container{
            width: 100%;
            height: 100%;
            .el-aside{
@@ -65,7 +67,7 @@ export default {
            }
            .el-main{
                width: 100%;
-               padding: 0px;
+               padding: 0;
            }
        }
        @media all and (max-width: 800px) {

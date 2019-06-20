@@ -5,13 +5,12 @@
 </template>
 
 <script>
-import { removeCookies } from '@/utils/cookie'
+// import { removeCookies } from '@/utils/cookie'
 
 export default {
   methods: {
     logoutFrom () {
-      removeCookies('username')
-      removeCookies('isNav')
+      this.$store.dispatch('toggleLogout')
       this.$router.push('/login')
     }
   }
